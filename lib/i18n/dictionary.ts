@@ -1,0 +1,98 @@
+export type Locale = "es" | "en";
+
+export const dictionary = {
+  es: {
+    navBrand: "StudentEssentials",
+    tabTextToolkit: "Redacción",
+    tabAcademicFormatter: "Formato MLA",
+    langLabel: "Idioma",
+    themeLight: "Claro",
+    themeDark: "Oscuro",
+    themeToggleAria: "Cambiar tema claro u oscuro",
+
+    textToolkitTitle: "Redacción",
+    statWords: "Palabras",
+    statChars: "Caracteres",
+    statParagraphs: "Párrafos",
+    statReading: "Tiempo de lectura",
+    readingSuffix: "min",
+    keywordTitle: "Densidad de palabras clave (top 5)",
+    keywordEmpty: "Escribe texto para ver las palabras más frecuentes.",
+    btnClearFormat: "Limpiar formato",
+    btnUppercase: "Convertir a MAYÚSCULAS",
+    btnLowercase: "Convertir a minúsculas",
+    btnCopy: "Copiar al portapapeles",
+    copyDone: "Copiado al portapapeles.",
+    textAreaPlaceholder: "Pega o escribe tu texto aquí…",
+
+    academicTitle: "Formato MLA",
+    labelStudent: "Nombre del estudiante",
+    labelProfessor: "Profesor",
+    labelSubject: "Clase",
+    labelDate: "Fecha",
+    labelTitle: "Título (opcional)",
+    labelUpload: "Subir archivo (txt, md, etc.)",
+    fileLoaded: "Archivo cargado correctamente en el texto.",
+    fileLoadError: "No se pudo leer el archivo seleccionado.",
+    labelFont: "Fuente MLA",
+    fontArial: "Arial",
+    fontTimes: "Times New Roman",
+    labelBody: "Cuerpo del trabajo",
+    btnGeneratePdf: "Generar PDF",
+    btnGenerating: "Generando…",
+    pdfHint:
+      "Formato MLA local: doble espacio, 12 pt, sangría de 1.27 cm en primera línea, encabezado MLA, título centrado (sin negrita) y número de página arriba a la derecha.",
+
+    footerHelpTitle: "Ayuda rápida",
+    footerHelpBody:
+      "Todo el análisis de texto ocurre en tu navegador: no enviamos tu contenido a ningún servidor. El PDF se genera localmente con jsPDF. Usa Text Toolkit para revisar extensión y vocabulario; Academic Formatter para entregar con formato académico consistente.",
+  },
+  en: {
+    navBrand: "StudentEssentials",
+    tabTextToolkit: "Composition",
+    tabAcademicFormatter: "MLA Format",
+    langLabel: "Language",
+    themeLight: "Light",
+    themeDark: "Dark",
+    themeToggleAria: "Toggle light or dark theme",
+
+    textToolkitTitle: "Composition",
+    statWords: "Words",
+    statChars: "Characters",
+    statParagraphs: "Paragraphs",
+    statReading: "Reading time",
+    readingSuffix: "min",
+    keywordTitle: "Keyword density (top 5)",
+    keywordEmpty: "Type text to see the most frequent meaningful words.",
+    btnClearFormat: "Clean format",
+    btnUppercase: "Convert to UPPERCASE",
+    btnLowercase: "Convert to lowercase",
+    btnCopy: "Copy to clipboard",
+    copyDone: "Copied to clipboard.",
+    textAreaPlaceholder: "Paste or type your text here…",
+
+    academicTitle: "MLA Format",
+    labelStudent: "Student name",
+    labelProfessor: "Professor",
+    labelSubject: "Class",
+    labelDate: "Date",
+    labelTitle: "Title (optional)",
+    labelUpload: "Upload file (txt, md, etc.)",
+    fileLoaded: "File loaded into the text area.",
+    fileLoadError: "Could not read the selected file.",
+    labelFont: "MLA font",
+    fontArial: "Arial",
+    fontTimes: "Times New Roman",
+    labelBody: "Assignment body",
+    btnGeneratePdf: "Generate PDF",
+    btnGenerating: "Generating…",
+    pdfHint:
+      "Local MLA output: double-spaced, 12 pt, 0.5 in first-line indentation, MLA header, centered title (no bold), and page number on top-right.",
+
+    footerHelpTitle: "Quick help",
+    footerHelpBody:
+      "All text analysis runs in your browser: we never send your content to a server. PDFs are built locally with jsPDF. Use Text Toolkit to check length and vocabulary; Academic Formatter for consistent academic layout.",
+  },
+} as const satisfies Record<Locale, Record<string, string>>;
+
+export type DictKey = keyof (typeof dictionary)["en"];
