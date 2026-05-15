@@ -2,7 +2,11 @@
 
 import Link from "next/link";
 import { useSuite } from "@/components/providers/SuiteProviders";
-import { NAV_ROUTES, SITE_NAME } from "@/lib/site-config";
+import { LEGAL_ROUTES, NAV_ROUTES, SITE_NAME } from "@/lib/site-config";
+
+const MAIN_FOOTER_ROUTES = NAV_ROUTES.filter(
+  (route) => !LEGAL_ROUTES.some((legal) => legal.path === route.path),
+);
 
 export function SiteFooter() {
   const { t } = useSuite();
@@ -20,9 +24,21 @@ export function SiteFooter() {
             </p>
           </div>
 
-          <nav aria-label={t("footerNavAria")}>
+          <nav aria-label={t("footerNavAria")} className="flex flex-col gap-4">
             <ul className="flex flex-wrap gap-x-5 gap-y-2">
-              {NAV_ROUTES.map((route) => (
+              {MAIN_FOOTER_ROUTES.map((route) => (
+                <li key={route.path}>
+                  <Link
+                    href={route.path}
+                    className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+                  >
+                    {t(route.labelKey)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul className="flex flex-wrap gap-x-5 gap-y-2 border-t border-[var(--border)] pt-4">
+              {LEGAL_ROUTES.map((route) => (
                 <li key={route.path}>
                   <Link
                     href={route.path}

@@ -107,6 +107,9 @@ export const dictionary = {
 
     privacyTitle: "Política de privacidad",
     termsTitle: "Términos de servicio",
+    legalBackHome: "Volver al inicio",
+    legalViewTerms: "Ver términos de servicio",
+    legalViewPrivacy: "Ver política de privacidad",
   },
   en: {
     navBrand: "QuickMLA",
@@ -214,6 +217,9 @@ export const dictionary = {
 
     privacyTitle: "Privacy Policy",
     termsTitle: "Terms of Service",
+    legalBackHome: "Back to home",
+    legalViewTerms: "View Terms of Service",
+    legalViewPrivacy: "View Privacy Policy",
   },
 } as const satisfies Record<Locale, Record<string, string>>;
 
