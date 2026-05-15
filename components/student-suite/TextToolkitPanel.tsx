@@ -41,7 +41,7 @@ export function TextToolkitPanel() {
 
   return (
     <section
-      className="mx-auto max-w-5xl space-y-6 px-4 py-6 sm:px-6"
+      className="space-y-6"
       aria-labelledby="text-toolkit-heading"
     >
       <div>

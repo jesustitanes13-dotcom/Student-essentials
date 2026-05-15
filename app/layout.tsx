@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { AdSenseScript } from "@/components/ads/AdUnit";
+import { SiteShell } from "@/components/layout/SiteShell";
+import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { Providers } from "./providers";
 import "./globals.css";
 
@@ -13,52 +16,48 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteName = "Student Productivity Suite";
-const descriptionEn =
-  "Fast SPA for students: bilingual text toolkit (word count, keyword density, formatting) and academic PDF formatter with double-spaced layout. Runs entirely in your browser.";
-const descriptionEs =
-  "SPA ligera para estudiantes: kit de texto bilingüe (conteo, densidad de palabras clave, formato) y generador de PDF académico a doble espacio. Todo en el navegador.";
-const keywordsEn =
-  "student productivity, word counter, keyword density, academic PDF, jspdf, essay formatter, bilingual";
-const keywordsEs =
-  "productividad estudiantil, contador de palabras, densidad de palabras clave, PDF académico, jspdf, formato de ensayo, bilingüe";
-
-const base =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+const defaultTitle = "Student Essentials | Free Academic Toolkit";
+const description =
+  "Free student tools: MLA formatter, word counter, composition analyzer, and keyword density. 100% browser-based—no sign-up, no data stored. Fast, private academic toolkit.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(base),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: `${siteName} — Text toolkit & academic PDF`,
-    template: `%s | ${siteName}`,
+    default: defaultTitle,
+    template: `%s | ${SITE_NAME}`,
   },
-  description: `${descriptionEn} ${descriptionEs}`,
-  applicationName: siteName,
-  keywords: [...keywordsEn.split(", "), ...keywordsEs.split(", ")],
-  authors: [{ name: siteName }],
-  creator: siteName,
+  description,
+  applicationName: SITE_NAME,
+  keywords: [
+    "student tools",
+    "MLA formatter",
+    "word counter",
+    "composition analyzer",
+    "keyword density",
+    "academic PDF",
+    "essay formatter",
+    "free student productivity",
+  ],
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   openGraph: {
     type: "website",
     locale: "en_US",
     alternateLocale: ["es_ES"],
-    siteName,
-    title: siteName,
-    description: descriptionEn,
-    url: "/",
+    siteName: SITE_NAME,
+    title: defaultTitle,
+    description,
+    url: SITE_URL,
   },
   twitter: {
     card: "summary_large_image",
-    title: siteName,
-    description: descriptionEn,
+    title: defaultTitle,
+    description,
   },
   robots: { index: true, follow: true },
   alternates: {
     canonical: "/",
-    languages: {
-      en: "/",
-      es: "/",
-    },
   },
   category: "education",
 };
@@ -75,7 +74,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="flex min-h-full flex-col antialiased">
-        <Providers>{children}</Providers>
+        <AdSenseScript />
+        <Providers>
+          <SiteShell>{children}</SiteShell>
+        </Providers>
       </body>
     </html>
   );

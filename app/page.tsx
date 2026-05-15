@@ -1,5 +1,5 @@
-import { StudentSuiteApp } from "@/components/student-suite/StudentSuiteApp";
+import { LandingPage } from "@/components/landing/LandingPage";
 
 export default function Home() {
-  return <StudentSuiteApp />;
+  return <LandingPage />;
 }

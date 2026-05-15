@@ -2,15 +2,48 @@ export type Locale = "es" | "en";
 
 export const dictionary = {
   es: {
-    navBrand: "StudentEssentials",
-    tabTextToolkit: "Redacción",
-    tabAcademicFormatter: "Formato MLA",
+    navBrand: "Student Essentials",
+    navTools: "Herramientas",
+    navMainAria: "Navegación principal",
     langLabel: "Idioma",
     themeLight: "Claro",
     themeDark: "Oscuro",
     themeToggleAria: "Cambiar tema claro u oscuro",
 
-    textToolkitTitle: "Redacción",
+    heroTitle: "Tu kit académico gratuito, 100% en el navegador",
+    heroSubtitle:
+      "Contador de palabras, analizador de composición y formateador MLA. Sin cuentas, sin servidores: tus ensayos nunca salen de tu dispositivo.",
+    heroCta: "Explorar herramientas",
+    heroCtaSecondary: "Formatear en MLA",
+    heroBadge: "Gratis · Privado · Instantáneo",
+
+    benefitsTitle: "Por qué Student Essentials",
+    benefitSpeedTitle: "Carga en milisegundos",
+    benefitSpeedDesc:
+      "Sitio estático optimizado para SEO y rendimiento en cualquier conexión.",
+    benefitPrivacyTitle: "Privacidad total",
+    benefitPrivacyDesc:
+      "Todo el procesamiento ocurre localmente. No almacenamos ni enviamos tu texto.",
+    benefitFreeTitle: "Siempre gratis",
+    benefitFreeDesc:
+      "Herramientas esenciales para estudiantes sin suscripciones ni registros.",
+
+    toolsSectionTitle: "Herramientas para estudiantes",
+    toolsSectionSubtitle:
+      "Elige la herramienta que necesitas y empieza al instante.",
+    toolCompositionName: "Analizador de composición",
+    toolCompositionDesc:
+      "Contador de palabras, tiempo de lectura, párrafos y densidad de palabras clave.",
+    toolMlaName: "Formateador MLA",
+    toolMlaDesc:
+      "Genera PDF académico con doble espacio, sangría MLA y encabezado correcto.",
+    toolCta: "Usar herramienta",
+    toolsIndexTitle: "Todas las herramientas",
+    toolsIndexSubtitle: "Suite de productividad académica gratuita.",
+
+    tabTextToolkit: "Redacción",
+    tabAcademicFormatter: "Formato MLA",
+    textToolkitTitle: "Analizador de composición",
     statWords: "Palabras",
     statChars: "Caracteres",
     statParagraphs: "Párrafos",
@@ -25,7 +58,7 @@ export const dictionary = {
     copyDone: "Copiado al portapapeles.",
     textAreaPlaceholder: "Pega o escribe tu texto aquí…",
 
-    academicTitle: "Formato MLA",
+    academicTitle: "Formateador MLA",
     labelStudent: "Nombre del estudiante",
     labelProfessor: "Profesor",
     labelSubject: "Clase",
@@ -41,22 +74,71 @@ export const dictionary = {
     btnGeneratePdf: "Generar PDF",
     btnGenerating: "Generando…",
     pdfHint:
-      "Formato MLA local: doble espacio, 12 pt, sangría de 1.27 cm en primera línea, encabezado MLA, título centrado (sin negrita) y número de página arriba a la derecha.",
+      "Formato MLA local: doble espacio, 12 pt, sangría de 1.27 cm, encabezado MLA, título centrado y número de página arriba a la derecha.",
 
-    footerHelpTitle: "Ayuda rápida",
-    footerHelpBody:
-      "Todo el análisis de texto ocurre en tu navegador: no enviamos tu contenido a ningún servidor. El PDF se genera localmente con jsPDF. Usa Text Toolkit para revisar extensión y vocabulario; Academic Formatter para entregar con formato académico consistente.",
+    footerHome: "Inicio",
+    footerTools: "Herramientas",
+    footerPrivacy: "Política de privacidad",
+    footerTerms: "Términos de servicio",
+    footerContact: "Contacto",
+    footerNavAria: "Enlaces del pie de página",
+    footerTagline:
+      "Herramientas de texto y formato académico que funcionan enteramente en tu navegador.",
+    footerRights: "Todos los derechos reservados.",
+
+    adLabel: "Espacio publicitario",
+    adPlaceholderAria: "Reserva para anuncio",
+
+    contactTitle: "Contacto",
+    contactIntro:
+      "¿Preguntas, sugerencias o problemas con una herramienta? Escríbenos.",
+    contactEmailLabel: "Correo electrónico",
+
+    privacyTitle: "Política de privacidad",
+    termsTitle: "Términos de servicio",
   },
   en: {
-    navBrand: "StudentEssentials",
-    tabTextToolkit: "Composition",
-    tabAcademicFormatter: "MLA Format",
+    navBrand: "Student Essentials",
+    navTools: "Tools",
+    navMainAria: "Main navigation",
     langLabel: "Language",
     themeLight: "Light",
     themeDark: "Dark",
     themeToggleAria: "Toggle light or dark theme",
 
-    textToolkitTitle: "Composition",
+    heroTitle: "Your free academic toolkit, 100% in the browser",
+    heroSubtitle:
+      "Word counter, composition analyzer, and MLA formatter. No accounts, no servers—your essays never leave your device.",
+    heroCta: "Browse tools",
+    heroCtaSecondary: "Format in MLA",
+    heroBadge: "Free · Private · Instant",
+
+    benefitsTitle: "Why Student Essentials",
+    benefitSpeedTitle: "Loads in milliseconds",
+    benefitSpeedDesc:
+      "Static site optimized for SEO and performance on any connection.",
+    benefitPrivacyTitle: "Full privacy",
+    benefitPrivacyDesc:
+      "All processing runs locally. We do not store or transmit your text.",
+    benefitFreeTitle: "Always free",
+    benefitFreeDesc:
+      "Essential student tools with no subscriptions or sign-ups.",
+
+    toolsSectionTitle: "Student tools",
+    toolsSectionSubtitle: "Pick the tool you need and start instantly.",
+    toolCompositionName: "Composition Analyzer",
+    toolCompositionDesc:
+      "Word counter, reading time, paragraphs, and keyword density analysis.",
+    toolMlaName: "MLA Formatter",
+    toolMlaDesc:
+      "Generate academic PDFs with double spacing, MLA indent, and proper header.",
+    toolCta: "Open tool",
+    toolsIndexTitle: "All tools",
+    toolsIndexSubtitle: "Free academic productivity suite.",
+
+    tabTextToolkit: "Composition",
+    tabAcademicFormatter: "MLA Format",
+    textToolkitTitle: "Composition Analyzer",
     statWords: "Words",
     statChars: "Characters",
     statParagraphs: "Paragraphs",
@@ -71,7 +153,7 @@ export const dictionary = {
     copyDone: "Copied to clipboard.",
     textAreaPlaceholder: "Paste or type your text here…",
 
-    academicTitle: "MLA Format",
+    academicTitle: "MLA Formatter",
     labelStudent: "Student name",
     labelProfessor: "Professor",
     labelSubject: "Class",
@@ -87,11 +169,28 @@ export const dictionary = {
     btnGeneratePdf: "Generate PDF",
     btnGenerating: "Generating…",
     pdfHint:
-      "Local MLA output: double-spaced, 12 pt, 0.5 in first-line indentation, MLA header, centered title (no bold), and page number on top-right.",
+      "Local MLA output: double-spaced, 12 pt, 0.5 in first-line indent, MLA header, centered title, and page number top-right.",
 
-    footerHelpTitle: "Quick help",
-    footerHelpBody:
-      "All text analysis runs in your browser: we never send your content to a server. PDFs are built locally with jsPDF. Use Text Toolkit to check length and vocabulary; Academic Formatter for consistent academic layout.",
+    footerHome: "Home",
+    footerTools: "Tools",
+    footerPrivacy: "Privacy Policy",
+    footerTerms: "Terms of Service",
+    footerContact: "Contact",
+    footerNavAria: "Footer links",
+    footerTagline:
+      "Text and academic formatting tools that run entirely in your browser.",
+    footerRights: "All rights reserved.",
+
+    adLabel: "Ad space",
+    adPlaceholderAria: "Advertisement placeholder",
+
+    contactTitle: "Contact",
+    contactIntro:
+      "Questions, feedback, or issues with a tool? Get in touch.",
+    contactEmailLabel: "Email",
+
+    privacyTitle: "Privacy Policy",
+    termsTitle: "Terms of Service",
   },
 } as const satisfies Record<Locale, Record<string, string>>;
 
