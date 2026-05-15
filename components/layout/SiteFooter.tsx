@@ -6,7 +6,6 @@ import { NAV_ROUTES, SITE_NAME } from "@/lib/site-config";
 
 export function SiteFooter() {
   const { t } = useSuite();
-  const year = new Date().getFullYear();
 
   return (
     <footer className="mt-auto border-t border-[var(--border)] bg-[var(--surface)]">
@@ -38,7 +37,7 @@ export function SiteFooter() {
         </div>
 
         <p className="mt-8 border-t border-[var(--border)] pt-6 text-xs text-[var(--text-muted)]">
-          © {year} {SITE_NAME}. {t("footerRights")}
+          © 2026 QuickMLA
         </p>
       </div>
     </footer>

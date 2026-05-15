@@ -2,7 +2,7 @@ export type Locale = "es" | "en";
 
 export const dictionary = {
   es: {
-    navBrand: "Student Essentials",
+    navBrand: "QuickMLA",
     navTools: "Herramientas",
     navMainAria: "Navegación principal",
     langLabel: "Idioma",
@@ -10,14 +10,14 @@ export const dictionary = {
     themeDark: "Oscuro",
     themeToggleAria: "Cambiar tema claro u oscuro",
 
-    heroTitle: "Tu kit académico gratuito, 100% en el navegador",
+    heroTitle: "QuickMLA: formatea ensayos MLA al instante",
     heroSubtitle:
-      "Contador de palabras, analizador de composición y formateador MLA. Sin cuentas, sin servidores: tus ensayos nunca salen de tu dispositivo.",
+      "La forma más rápida de aplicar formato MLA y analizar tu texto académico de forma local y segura. Sin cuentas ni servidores.",
     heroCta: "Explorar herramientas",
     heroCtaSecondary: "Formatear en MLA",
     heroBadge: "Gratis · Privado · Instantáneo",
 
-    benefitsTitle: "Por qué Student Essentials",
+    benefitsTitle: "Por qué QuickMLA",
     benefitSpeedTitle: "Carga en milisegundos",
     benefitSpeedDesc:
       "Sitio estático optimizado para SEO y rendimiento en cualquier conexión.",
@@ -28,9 +28,9 @@ export const dictionary = {
     benefitFreeDesc:
       "Herramientas esenciales para estudiantes sin suscripciones ni registros.",
 
-    toolsSectionTitle: "Herramientas para estudiantes",
+    toolsSectionTitle: "Herramientas QuickMLA",
     toolsSectionSubtitle:
-      "Elige la herramienta que necesitas y empieza al instante.",
+      "Formato MLA, contador de palabras y análisis de composición en un solo lugar.",
     toolCompositionName: "Analizador de composición",
     toolCompositionDesc:
       "Contador de palabras, tiempo de lectura, párrafos y densidad de palabras clave.",
@@ -39,7 +39,7 @@ export const dictionary = {
       "Genera PDF académico con doble espacio, sangría MLA y encabezado correcto.",
     toolCta: "Usar herramienta",
     toolsIndexTitle: "Todas las herramientas",
-    toolsIndexSubtitle: "Suite de productividad académica gratuita.",
+    toolsIndexSubtitle: "Herramientas académicas gratuitas de QuickMLA.",
 
     tabTextToolkit: "Redacción",
     tabAcademicFormatter: "Formato MLA",
@@ -71,6 +71,17 @@ export const dictionary = {
     fontArial: "Arial",
     fontTimes: "Times New Roman",
     labelBody: "Cuerpo del trabajo",
+    formatToolbarAria: "Formato del cuerpo del trabajo",
+    formatAlignLabel: "Alineación",
+    formatLineSpacingLabel: "Interlineado",
+    alignLeftAria: "Alinear a la izquierda",
+    alignCenterAria: "Centrar",
+    alignRightAria: "Alinear a la derecha",
+    alignJustifyAria: "Justificar",
+    lineSpacingSingle: "Sencillo (1.0)",
+    lineSpacing115: "1.15",
+    lineSpacing15: "1.5",
+    lineSpacingDouble: "Doble (2.0)",
     btnGeneratePdf: "Generar PDF",
     btnGenerating: "Generando…",
     pdfHint:
@@ -83,7 +94,7 @@ export const dictionary = {
     footerContact: "Contacto",
     footerNavAria: "Enlaces del pie de página",
     footerTagline:
-      "Herramientas de texto y formato académico que funcionan enteramente en tu navegador.",
+      "QuickMLA: formato MLA y análisis de texto académico, 100% en tu navegador.",
     footerRights: "Todos los derechos reservados.",
 
     adLabel: "Espacio publicitario",
@@ -98,7 +109,7 @@ export const dictionary = {
     termsTitle: "Términos de servicio",
   },
   en: {
-    navBrand: "Student Essentials",
+    navBrand: "QuickMLA",
     navTools: "Tools",
     navMainAria: "Main navigation",
     langLabel: "Language",
@@ -106,14 +117,14 @@ export const dictionary = {
     themeDark: "Dark",
     themeToggleAria: "Toggle light or dark theme",
 
-    heroTitle: "Your free academic toolkit, 100% in the browser",
+    heroTitle: "QuickMLA: format MLA essays in seconds",
     heroSubtitle:
-      "Word counter, composition analyzer, and MLA formatter. No accounts, no servers—your essays never leave your device.",
+      "The fastest way to format your essays in MLA and analyze your academic text locally and securely. No accounts or servers.",
     heroCta: "Browse tools",
     heroCtaSecondary: "Format in MLA",
     heroBadge: "Free · Private · Instant",
 
-    benefitsTitle: "Why Student Essentials",
+    benefitsTitle: "Why QuickMLA",
     benefitSpeedTitle: "Loads in milliseconds",
     benefitSpeedDesc:
       "Static site optimized for SEO and performance on any connection.",
@@ -122,10 +133,11 @@ export const dictionary = {
       "All processing runs locally. We do not store or transmit your text.",
     benefitFreeTitle: "Always free",
     benefitFreeDesc:
-      "Essential student tools with no subscriptions or sign-ups.",
+      "Essential academic tools with no subscriptions or sign-ups.",
 
-    toolsSectionTitle: "Student tools",
-    toolsSectionSubtitle: "Pick the tool you need and start instantly.",
+    toolsSectionTitle: "QuickMLA tools",
+    toolsSectionSubtitle:
+      "MLA formatting, word counter, and composition analysis in one place.",
     toolCompositionName: "Composition Analyzer",
     toolCompositionDesc:
       "Word counter, reading time, paragraphs, and keyword density analysis.",
@@ -134,7 +146,7 @@ export const dictionary = {
       "Generate academic PDFs with double spacing, MLA indent, and proper header.",
     toolCta: "Open tool",
     toolsIndexTitle: "All tools",
-    toolsIndexSubtitle: "Free academic productivity suite.",
+    toolsIndexSubtitle: "Free academic writing tools from QuickMLA.",
 
     tabTextToolkit: "Composition",
     tabAcademicFormatter: "MLA Format",
@@ -166,6 +178,17 @@ export const dictionary = {
     fontArial: "Arial",
     fontTimes: "Times New Roman",
     labelBody: "Assignment body",
+    formatToolbarAria: "Assignment body formatting",
+    formatAlignLabel: "Alignment",
+    formatLineSpacingLabel: "Line spacing",
+    alignLeftAria: "Align left",
+    alignCenterAria: "Align center",
+    alignRightAria: "Align right",
+    alignJustifyAria: "Justify",
+    lineSpacingSingle: "Single (1.0)",
+    lineSpacing115: "1.15",
+    lineSpacing15: "1.5",
+    lineSpacingDouble: "Double (2.0)",
     btnGeneratePdf: "Generate PDF",
     btnGenerating: "Generating…",
     pdfHint:
@@ -178,7 +201,7 @@ export const dictionary = {
     footerContact: "Contact",
     footerNavAria: "Footer links",
     footerTagline:
-      "Text and academic formatting tools that run entirely in your browser.",
+      "QuickMLA: MLA formatting and academic text analysis, 100% in your browser.",
     footerRights: "All rights reserved.",
 
     adLabel: "Ad space",

@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import { useSuite } from "@/components/providers/SuiteProviders";
+import { BodyFormatToolbar } from "@/components/student-suite/BodyFormatToolbar";
+import type { BodyTextAlign, LineSpacing } from "@/lib/body-format";
+import {
+  DEFAULT_LINE_SPACING,
+  DEFAULT_TEXT_ALIGN,
+} from "@/lib/body-format";
 import { buildAcademicPdf } from "@/lib/pdf-academic";
 
 export function AcademicFormatterPanel() {
@@ -13,6 +19,9 @@ export function AcademicFormatterPanel() {
   const [title, setTitle] = useState("");
   const [fontFamily, setFontFamily] = useState<"arial" | "times">("times");
   const [body, setBody] = useState("");
+  const [textAlign, setTextAlign] = useState<BodyTextAlign>(DEFAULT_TEXT_ALIGN);
+  const [lineSpacing, setLineSpacing] =
+    useState<LineSpacing>(DEFAULT_LINE_SPACING);
   const [liveMsg, setLiveMsg] = useState("");
   const [busy, setBusy] = useState(false);
 
@@ -27,6 +36,8 @@ export function AcademicFormatterPanel() {
         title,
         body,
         fontFamily,
+        textAlign,
+        lineSpacing,
       });
     } finally {
       setBusy(false);
@@ -183,12 +194,22 @@ export function AcademicFormatterPanel() {
         >
           {t("labelBody")}
         </label>
+        <BodyFormatToolbar
+          textAlign={textAlign}
+          lineSpacing={lineSpacing}
+          onTextAlignChange={setTextAlign}
+          onLineSpacingChange={setLineSpacing}
+        />
         <textarea
           id="work-body"
           value={body}
           onChange={(e) => setBody(e.target.value)}
           rows={14}
-          className={`${fieldClass} mt-1 resize-y leading-relaxed`}
+          className={`${fieldClass} resize-y rounded-t-none border-t-0 text-base shadow-sm`}
+          style={{
+            textAlign,
+            lineHeight: lineSpacing,
+          }}
           spellCheck
         />
       </div>

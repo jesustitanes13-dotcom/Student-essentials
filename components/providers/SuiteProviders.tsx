@@ -23,8 +23,8 @@ type SuiteContextValue = {
 
 const SuiteContext = createContext<SuiteContextValue | null>(null);
 
-const STORAGE_LOCALE = "sps-locale";
-const STORAGE_THEME = "sps-theme";
+const STORAGE_LOCALE = "quickmla-locale";
+const STORAGE_THEME = "quickmla-theme";
 
 function readStoredLocale(): Locale | null {
   if (typeof window === "undefined") return null;

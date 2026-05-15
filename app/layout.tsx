@@ -16,9 +16,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const defaultTitle = "Student Essentials | Free Academic Toolkit";
+const defaultTitle =
+  "QuickMLA | Fast MLA Formatter & Academic Writing Tools";
 const description =
-  "Free student tools: MLA formatter, word counter, composition analyzer, and keyword density. 100% browser-based—no sign-up, no data stored. Fast, private academic toolkit.";
+  "QuickMLA is the fastest way to format your essays in MLA and analyze your academic text locally and securely.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -29,14 +30,14 @@ export const metadata: Metadata = {
   description,
   applicationName: SITE_NAME,
   keywords: [
-    "student tools",
+    "QuickMLA",
     "MLA formatter",
     "word counter",
     "composition analyzer",
     "keyword density",
-    "academic PDF",
+    "academic writing tools",
     "essay formatter",
-    "free student productivity",
+    "local MLA PDF",
   ],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,

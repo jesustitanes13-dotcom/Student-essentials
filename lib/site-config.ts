@@ -1,12 +1,12 @@
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://student-essentials.com";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://quickmla.com";
 
-export const SITE_NAME = "Student Essentials";
+export const SITE_NAME = "QuickMLA";
 
 export const ADSENSE_CLIENT_ID =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID ?? "ca-pub-XXXXXXXXXXXXXXXX";
 
-export const CONTACT_EMAIL = "hello@student-essentials.com";
+export const CONTACT_EMAIL = "hello@quickmla.com";
 
 export type ToolDefinition = {
   slug: string;

@@ -1,3 +1,5 @@
+import type { BodyTextAlign, LineSpacing } from "@/lib/body-format";
+
 type AcademicPdfInput = {
   student: string;
   professor: string;
@@ -6,6 +8,8 @@ type AcademicPdfInput = {
   title: string;
   body: string;
   fontFamily: "arial" | "times";
+  textAlign: BodyTextAlign;
+  lineSpacing: LineSpacing;
 };
 
 function extractMlaLastName(fullName: string): string {
@@ -91,18 +95,19 @@ export async function buildAcademicPdf(input: AcademicPdfInput): Promise<void> {
   const { jsPDF } = await import("jspdf");
   const doc = new jsPDF({ unit: "mm", format: "a4", compress: true });
 
-  const marginX = 25.4; // 1 inch MLA margin
+  const marginX = 25.4;
   const topY = 25.4;
   const bottomMargin = 25.4;
-  const firstLineIndent = 12.7; // 0.5 inches
+  const firstLineIndent = 12.7;
+  const fontSizePt = 12;
   const pageWidth = doc.internal.pageSize.getWidth();
   const pageHeight = doc.internal.pageSize.getHeight();
   const rightX = pageWidth - marginX;
   const maxWidth = rightX - marginX;
 
   doc.setFont(input.fontFamily === "times" ? "times" : "helvetica", "normal");
-  doc.setFontSize(12);
-  doc.setLineHeightFactor(2);
+  doc.setFontSize(fontSizePt);
+  doc.setLineHeightFactor(input.lineSpacing);
 
   let y = topY;
   const lineHeightMm = doc.getLineHeight() / doc.internal.scaleFactor;
@@ -115,16 +120,39 @@ export async function buildAcademicPdf(input: AcademicPdfInput): Promise<void> {
     }
   };
 
-  const drawLeftLine = (text: string, x = marginX) => {
+  const drawHeaderLine = (text: string) => {
     ensureSpace(1);
-    doc.text(text, x, y);
+    doc.text(text, marginX, y, { align: "left" });
     y += lineHeightMm;
   };
 
-  drawLeftLine(input.student.trim());
-  drawLeftLine(input.professor.trim());
-  drawLeftLine(input.subject.trim());
-  drawLeftLine(input.date.trim());
+  const drawBodyLine = (
+    text: string,
+    options?: { firstLineOfParagraph?: boolean },
+  ) => {
+    ensureSpace(1);
+    const align = input.textAlign;
+    const isFirstLeft =
+      align === "left" && (options?.firstLineOfParagraph ?? false);
+
+    if (align === "center") {
+      doc.text(text, pageWidth / 2, y, { align: "center" });
+    } else if (align === "right") {
+      doc.text(text, rightX, y, { align: "right" });
+    } else if (align === "justify") {
+      doc.text(text, marginX, y, { align: "justify", maxWidth });
+    } else {
+      const x = isFirstLeft ? marginX + firstLineIndent : marginX;
+      doc.text(text, x, y, { align: "left" });
+    }
+
+    y += lineHeightMm;
+  };
+
+  drawHeaderLine(input.student.trim());
+  drawHeaderLine(input.professor.trim());
+  drawHeaderLine(input.subject.trim());
+  drawHeaderLine(input.date.trim());
   y += lineHeightMm;
 
   const trimmedTitle = input.title.trim();
@@ -142,18 +170,26 @@ export async function buildAcademicPdf(input: AcademicPdfInput): Promise<void> {
     .filter(Boolean);
 
   for (const paragraph of paragraphs) {
-    const firstLineWidth = maxWidth - firstLineIndent;
-    const firstLines = doc.splitTextToSize(paragraph, firstLineWidth);
-    if (firstLines.length === 0) continue;
+    if (input.textAlign === "left") {
+      const firstLineWidth = maxWidth - firstLineIndent;
+      const firstLines = doc.splitTextToSize(paragraph, firstLineWidth);
+      if (firstLines.length === 0) continue;
 
-    drawLeftLine(firstLines[0], marginX + firstLineIndent);
+      drawBodyLine(firstLines[0], { firstLineOfParagraph: true });
 
-    if (firstLines.length > 1) {
-      const remainingText = firstLines.slice(1).join(" ");
-      const remainingLines = doc.splitTextToSize(remainingText, maxWidth);
-      for (const line of remainingLines) {
-        drawLeftLine(line, marginX);
+      if (firstLines.length > 1) {
+        const remainingText = firstLines.slice(1).join(" ");
+        const remainingLines = doc.splitTextToSize(remainingText, maxWidth);
+        for (const line of remainingLines) {
+          drawBodyLine(line);
+        }
       }
+      continue;
+    }
+
+    const lines = doc.splitTextToSize(paragraph, maxWidth);
+    for (const line of lines) {
+      drawBodyLine(line);
     }
   }
 
