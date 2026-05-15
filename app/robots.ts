@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "@/lib/site-config";
+import { CANONICAL_ORIGIN, canonicalUrl } from "@/lib/site-config";
 
 export const dynamic = "force-static";
 
@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: `${SITE_URL}/sitemap.xml`,
-    host: new URL(SITE_URL).host,
+    sitemap: canonicalUrl("/sitemap.xml"),
+    host: new URL(CANONICAL_ORIGIN).host,
   };
 }

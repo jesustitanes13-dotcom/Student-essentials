@@ -1,5 +1,11 @@
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://quickmla.com";
+/** Dominio de producción — siempre usado en sitemap, robots, Open Graph y canonical. */
+export const CANONICAL_ORIGIN = "https://quickmla.com";
+
+/**
+ * Origen público del sitio. En producción y builds estáticos siempre es quickmla.com,
+ * sin usar el subdominio de Vercel (VERCEL_URL / preview URLs).
+ */
+export const SITE_URL = CANONICAL_ORIGIN;
 
 export const SITE_NAME = "QuickMLA";
 
@@ -7,6 +13,12 @@ export const ADSENSE_CLIENT_ID =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID ?? "ca-pub-XXXXXXXXXXXXXXXX";
 
 export const CONTACT_EMAIL = "hello@quickmla.com";
+
+/** Ruta relativa → URL absoluta en quickmla.com */
+export function canonicalUrl(path = "/"): string {
+  if (path === "/" || path === "") return CANONICAL_ORIGIN;
+  return `${CANONICAL_ORIGIN}${path.startsWith("/") ? path : `/${path}`}`;
+}
 
 export type ToolDefinition = {
   slug: string;

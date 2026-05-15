@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { AdSenseScript } from "@/components/ads/AdUnit";
 import { SiteShell } from "@/components/layout/SiteShell";
-import { SITE_NAME, SITE_URL } from "@/lib/site-config";
+import {
+  CANONICAL_ORIGIN,
+  canonicalUrl,
+  SITE_NAME,
+} from "@/lib/site-config";
 import { Providers } from "./providers";
 import "./globals.css";
 
@@ -21,8 +25,10 @@ const defaultTitle =
 const description =
   "QuickMLA is the fastest way to format your essays in MLA and analyze your academic text locally and securely.";
 
+const ogImageUrl = canonicalUrl("/globe.svg");
+
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(CANONICAL_ORIGIN),
   title: {
     default: defaultTitle,
     template: `%s | ${SITE_NAME}`,
@@ -39,7 +45,7 @@ export const metadata: Metadata = {
     "essay formatter",
     "local MLA PDF",
   ],
-  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  authors: [{ name: SITE_NAME, url: CANONICAL_ORIGIN }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
   openGraph: {
@@ -49,16 +55,23 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: defaultTitle,
     description,
-    url: SITE_URL,
+    url: CANONICAL_ORIGIN,
+    images: [
+      {
+        url: ogImageUrl,
+        alt: SITE_NAME,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: defaultTitle,
     description,
+    images: [ogImageUrl],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "/",
+    canonical: CANONICAL_ORIGIN,
   },
   category: "education",
 };

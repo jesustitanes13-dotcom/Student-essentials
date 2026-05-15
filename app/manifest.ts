@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE_NAME, SITE_URL } from "@/lib/site-config";
+import { CANONICAL_ORIGIN, SITE_NAME } from "@/lib/site-config";
 
 export const dynamic = "force-static";
 
@@ -22,6 +22,6 @@ export default function manifest(): MetadataRoute.Manifest {
         type: "image/svg+xml",
       },
     ],
-    id: SITE_URL,
+    id: CANONICAL_ORIGIN,
   };
 }
