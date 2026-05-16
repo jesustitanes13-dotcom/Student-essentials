@@ -4,9 +4,8 @@ import { join } from "path";
 const root = process.cwd();
 const target = join(root, "public", "icon.png");
 const sources = [
-  join(root, "public", "icon.png"),
   join(root, "icon.png"),
-  join(root, "components", "tools", "icon (3).png"),
+  join(root, "public", "icon.png"),
   join(root, "app", "icon.png"),
 ];
 

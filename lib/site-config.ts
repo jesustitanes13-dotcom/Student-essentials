@@ -15,7 +15,7 @@ export const ADSENSE_CLIENT_ID =
 export const CONTACT_EMAIL = "hello@quickmla.com";
 
 /** Versión del favicon (cambiar al actualizar public/icon.png y volver a hacer build). */
-export const FAVICON_VERSION = "8";
+export const FAVICON_VERSION = "9";
 
 const v = `?v=${FAVICON_VERSION}`;
 
