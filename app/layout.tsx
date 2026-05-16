@@ -5,6 +5,7 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import {
   CANONICAL_ORIGIN,
   canonicalUrl,
+  FAVICON_PUBLIC_URL,
   SITE_NAME,
 } from "@/lib/site-config";
 import { Providers } from "./providers";
@@ -36,8 +37,19 @@ export const metadata: Metadata = {
   description,
   applicationName: SITE_NAME,
   icons: {
-    icon: "/icon.png",
-    apple: "/icon.png",
+    icon: [
+      {
+        url: FAVICON_PUBLIC_URL,
+        type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        url: FAVICON_PUBLIC_URL,
+        type: "image/png",
+        sizes: "192x192",
+      },
+    ],
+    apple: FAVICON_PUBLIC_URL,
   },
   keywords: [
     "QuickMLA",
@@ -91,6 +103,16 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
+      <head>
+        <link
+          rel="icon"
+          href={FAVICON_PUBLIC_URL}
+          type="image/png"
+          sizes="32x32"
+        />
+        <link rel="shortcut icon" href={FAVICON_PUBLIC_URL} type="image/png" />
+        <link rel="apple-touch-icon" href={FAVICON_PUBLIC_URL} />
+      </head>
       <body className="flex min-h-full flex-col antialiased">
         <AdSenseScript />
         <Providers>
