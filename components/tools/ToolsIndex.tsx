@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { QuickNav } from "@/components/layout/QuickNav";
 import { useSuite } from "@/components/providers/SuiteProviders";
 import { TOOLS } from "@/lib/site-config";
 
@@ -16,6 +17,9 @@ export function ToolsIndex() {
         <p className="mt-2 max-w-2xl text-sm text-[var(--text-secondary)]">
           {t("toolsIndexSubtitle")}
         </p>
+        <div className="mt-6">
+          <QuickNav />
+        </div>
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
           {TOOLS.map((tool) => (
             <li key={tool.slug}>

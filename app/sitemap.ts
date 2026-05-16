@@ -8,7 +8,6 @@ const SITEMAP_PATHS = [
   { path: "/tools", changeFrequency: "weekly" as const, priority: 0.9 },
   { path: "/privacy-policy", changeFrequency: "yearly" as const, priority: 0.3 },
   { path: "/terms-of-service", changeFrequency: "yearly" as const, priority: 0.3 },
-  { path: "/contact", changeFrequency: "yearly" as const, priority: 0.4 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

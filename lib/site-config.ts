@@ -12,7 +12,7 @@ export const SITE_NAME = "QuickMLA";
 export const ADSENSE_CLIENT_ID =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID ?? "ca-pub-XXXXXXXXXXXXXXXX";
 
-export const CONTACT_EMAIL = "hello@quickmla.com";
+export const CONTACT_EMAIL = "helloquickmla@gmail.com";
 
 /** Versión del favicon (cambiar al actualizar public/icon.png y volver a hacer build). */
 export const FAVICON_VERSION = "9";
@@ -63,7 +63,6 @@ export const TOOLS: ToolDefinition[] = [
 export const LEGAL_ROUTES = [
   { path: "/privacy-policy", labelKey: "footerPrivacy" as const },
   { path: "/terms-of-service", labelKey: "footerTerms" as const },
-  { path: "/contact", labelKey: "footerContact" as const },
 ];
 
 export const NAV_ROUTES = [

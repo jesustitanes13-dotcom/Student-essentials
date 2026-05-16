@@ -1,6 +1,7 @@
 "use client";
 
 import { AdPlaceholder } from "@/components/ads/AdPlaceholder";
+import { QuickNav } from "@/components/layout/QuickNav";
 
 type ToolPageLayoutProps = {
   children: React.ReactNode;
@@ -11,6 +12,7 @@ export function ToolPageLayout({ children }: ToolPageLayoutProps) {
     <main className="flex-1 bg-[var(--page)]">
       <div className="mx-auto flex max-w-6xl gap-6 px-4 py-6 sm:px-6">
         <div className="min-w-0 flex-1 space-y-6">
+          <QuickNav />
           {children}
           <AdPlaceholder variant="banner" />
         </div>

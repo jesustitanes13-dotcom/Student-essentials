@@ -3,8 +3,10 @@ export type Locale = "es" | "en";
 export const dictionary = {
   es: {
     navBrand: "QuickMLA",
+    navHome: "Inicio",
     navTools: "Herramientas",
     navMainAria: "Navegación principal",
+    quickNavAria: "Navegación rápida entre herramientas",
     langLabel: "Idioma",
     themeLight: "Claro",
     themeDark: "Oscuro",
@@ -91,19 +93,14 @@ export const dictionary = {
     footerTools: "Herramientas",
     footerPrivacy: "Política de privacidad",
     footerTerms: "Términos de servicio",
-    footerContact: "Contacto",
     footerNavAria: "Enlaces del pie de página",
+    footerSupportLabel: "Soporte",
     footerTagline:
       "QuickMLA: formato MLA y análisis de texto académico, 100% en tu navegador.",
     footerRights: "Todos los derechos reservados.",
 
     adLabel: "Espacio publicitario",
     adPlaceholderAria: "Reserva para anuncio",
-
-    contactTitle: "Contacto",
-    contactIntro:
-      "¿Preguntas, sugerencias o problemas con una herramienta? Escríbenos.",
-    contactEmailLabel: "Correo electrónico",
 
     privacyTitle: "Política de privacidad",
     termsTitle: "Términos de servicio",
@@ -113,8 +110,10 @@ export const dictionary = {
   },
   en: {
     navBrand: "QuickMLA",
+    navHome: "Home",
     navTools: "Tools",
     navMainAria: "Main navigation",
+    quickNavAria: "Quick navigation between tools",
     langLabel: "Language",
     themeLight: "Light",
     themeDark: "Dark",
@@ -201,19 +200,14 @@ export const dictionary = {
     footerTools: "Tools",
     footerPrivacy: "Privacy Policy",
     footerTerms: "Terms of Service",
-    footerContact: "Contact",
     footerNavAria: "Footer links",
+    footerSupportLabel: "Support",
     footerTagline:
       "QuickMLA: MLA formatting and academic text analysis, 100% in your browser.",
     footerRights: "All rights reserved.",
 
     adLabel: "Ad space",
     adPlaceholderAria: "Advertisement placeholder",
-
-    contactTitle: "Contact",
-    contactIntro:
-      "Questions, feedback, or issues with a tool? Get in touch.",
-    contactEmailLabel: "Email",
 
     privacyTitle: "Privacy Policy",
     termsTitle: "Terms of Service",
