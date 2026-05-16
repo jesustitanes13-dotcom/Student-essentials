@@ -29,8 +29,8 @@ export function LandingPage() {
   return (
     <>
       <section className="border-b border-[var(--border)] bg-[var(--surface)]">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:items-center lg:py-20">
-          <div>
+        <div className="mx-auto max-w-6xl px-4 py-14 text-center sm:px-6 lg:py-20">
+          <div className="mx-auto flex max-w-2xl flex-col items-center">
             <p className="inline-flex rounded-full border border-[var(--border)] bg-[var(--page)] px-3 py-1 text-xs font-medium text-[var(--accent)]">
               {t("heroBadge")}
             </p>
@@ -40,7 +40,7 @@ export function LandingPage() {
             <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--text-secondary)]">
               {t("heroSubtitle")}
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
                 href="/tools"
                 className="rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[var(--accent-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
@@ -54,16 +54,6 @@ export function LandingPage() {
                 {t("heroCtaSecondary")}
               </Link>
             </div>
-          </div>
-          <div className="relative mx-auto flex w-full max-w-md items-center justify-center lg:max-w-none">
-            <Image
-              src="/globe.svg"
-              alt=""
-              width={320}
-              height={320}
-              className="h-auto w-full max-w-[280px] opacity-90 dark:invert"
-              priority
-            />
           </div>
         </div>
       </section>

@@ -17,9 +17,9 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: "en",
     icons: [
       {
-        src: "/globe.svg",
-        sizes: "any",
-        type: "image/svg+xml",
+        src: "/Logo.png2.png",
+        sizes: "512x512",
+        type: "image/png",
       },
     ],
     id: CANONICAL_ORIGIN,

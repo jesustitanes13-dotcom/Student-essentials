@@ -18,14 +18,14 @@ export function SiteHeader() {
           className="flex min-w-0 flex-1 items-center gap-2.5 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
         >
           <Image
-            src="/globe.svg"
+            src="/Logo.png2.png"
             alt=""
-            width={32}
-            height={32}
-            className="h-8 w-8 shrink-0 rounded-lg bg-[var(--hover)] p-1.5"
+            width={240}
+            height={40}
+            className="h-10 w-auto shrink-0 object-contain"
             priority
           />
-          <span className="truncate text-lg font-medium tracking-tight text-[var(--text-primary)]">
+          <span className="truncate text-xl font-medium tracking-tight text-[var(--text-primary)]">
             {t("navBrand")}
           </span>
         </Link>

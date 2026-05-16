@@ -25,7 +25,7 @@ const defaultTitle =
 const description =
   "QuickMLA is the fastest way to format your essays in MLA and analyze your academic text locally and securely.";
 
-const ogImageUrl = canonicalUrl("/globe.svg");
+const ogImageUrl = canonicalUrl("/Logo.png2.png");
 
 export const metadata: Metadata = {
   metadataBase: new URL(CANONICAL_ORIGIN),
@@ -35,6 +35,10 @@ export const metadata: Metadata = {
   },
   description,
   applicationName: SITE_NAME,
+  icons: {
+    icon: [{ url: "/Logo.png2.png", type: "image/png" }],
+    apple: [{ url: "/Logo.png2.png", type: "image/png" }],
+  },
   keywords: [
     "QuickMLA",
     "MLA formatter",
