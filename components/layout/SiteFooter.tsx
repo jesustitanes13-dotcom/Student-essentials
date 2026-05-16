@@ -22,7 +22,7 @@ export function SiteFooter() {
             <p className="mt-2 max-w-sm text-sm leading-relaxed text-[var(--text-secondary)]">
               {t("footerTagline")}
             </p>
-          </v>
+          </div>
 
           <nav aria-label={t("footerNavAria")} className="flex flex-col gap-4">
             <ul className="flex flex-wrap gap-x-5 gap-y-2">
@@ -50,12 +50,12 @@ export function SiteFooter() {
               ))}
             </ul>
           </nav>
-        </v>
+        </div>
 
         <p className="mt-8 border-t border-[var(--border)] pt-6 text-xs text-[var(--text-muted)]">
           © 2026 QuickMLA
         </p>
-      </v>
+      </div>
     </footer>
   );
 }
