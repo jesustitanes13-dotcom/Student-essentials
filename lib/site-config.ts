@@ -14,8 +14,8 @@ export const ADSENSE_CLIENT_ID =
 
 export const CONTACT_EMAIL = "hello@quickmla.com";
 
-/** Icono de pestaña (sin nombre favicon; evita automatización de Next). */
-export const FAVICON_PUBLIC_URL = "/icon-app.png?v=3";
+/** Icono de pestaña (`public/icon.png`, copia de `app/icon.png`). */
+export const FAVICON_PUBLIC_URL = "/icon.png";
 
 /** Ruta relativa → URL absoluta en quickmla.com */
 export function canonicalUrl(path = "/"): string {
