@@ -14,11 +14,20 @@ export const ADSENSE_CLIENT_ID =
 
 export const CONTACT_EMAIL = "hello@quickmla.com";
 
-/** Versión del favicon (cambiar al actualizar la imagen para romper caché del navegador). */
-export const FAVICON_VERSION = "7";
+/** Versión del favicon (cambiar al actualizar public/icon.png y volver a hacer build). */
+export const FAVICON_VERSION = "8";
 
-/** Icono de pestaña servido desde `public/icon.png`. */
-export const FAVICON_PUBLIC_URL = `/icon.png?v=${FAVICON_VERSION}`;
+const v = `?v=${FAVICON_VERSION}`;
+
+/** Favicon 32px generado desde public/icon.png (fondo blanco, visible en pestaña). */
+export const FAVICON_URL = `/favicon-32.png${v}`;
+
+export const FAVICON_ICO_URL = `/favicon.ico${v}`;
+
+export const APPLE_TOUCH_ICON_URL = `/apple-touch-icon.png${v}`;
+
+/** @deprecated Usar FAVICON_URL */
+export const FAVICON_PUBLIC_URL = FAVICON_URL;
 
 /** Ruta relativa → URL absoluta en quickmla.com */
 export function canonicalUrl(path = "/"): string {

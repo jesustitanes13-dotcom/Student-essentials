@@ -3,9 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { AdSenseScript } from "@/components/ads/AdUnit";
 import { SiteShell } from "@/components/layout/SiteShell";
 import {
+  APPLE_TOUCH_ICON_URL,
   CANONICAL_ORIGIN,
   canonicalUrl,
-  FAVICON_PUBLIC_URL,
+  FAVICON_ICO_URL,
+  FAVICON_URL,
   SITE_NAME,
 } from "@/lib/site-config";
 import { Providers } from "./providers";
@@ -38,18 +40,10 @@ export const metadata: Metadata = {
   applicationName: SITE_NAME,
   icons: {
     icon: [
-      {
-        url: FAVICON_PUBLIC_URL,
-        type: "image/png",
-        sizes: "32x32",
-      },
-      {
-        url: FAVICON_PUBLIC_URL,
-        type: "image/png",
-        sizes: "192x192",
-      },
+      { url: FAVICON_ICO_URL, sizes: "32x32" },
+      { url: FAVICON_URL, type: "image/png", sizes: "32x32" },
     ],
-    apple: FAVICON_PUBLIC_URL,
+    apple: APPLE_TOUCH_ICON_URL,
   },
   keywords: [
     "QuickMLA",
@@ -104,14 +98,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
       <head>
-        <link
-          rel="icon"
-          href={FAVICON_PUBLIC_URL}
-          type="image/png"
-          sizes="32x32"
-        />
-        <link rel="shortcut icon" href={FAVICON_PUBLIC_URL} type="image/png" />
-        <link rel="apple-touch-icon" href={FAVICON_PUBLIC_URL} />
+        <link rel="icon" href={FAVICON_ICO_URL} sizes="32x32" />
+        <link rel="icon" href={FAVICON_URL} type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href={APPLE_TOUCH_ICON_URL} />
       </head>
       <body className="flex min-h-full flex-col antialiased">
         <AdSenseScript />

@@ -1,5 +1,9 @@
 import type { MetadataRoute } from "next";
-import { CANONICAL_ORIGIN, FAVICON_PUBLIC_URL, SITE_NAME } from "@/lib/site-config";
+import {
+  CANONICAL_ORIGIN,
+  FAVICON_VERSION,
+  SITE_NAME,
+} from "@/lib/site-config";
 
 export const dynamic = "force-static";
 
@@ -17,8 +21,8 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: "en",
     icons: [
       {
-        src: FAVICON_PUBLIC_URL,
-        sizes: "512x512",
+        src: `/favicon-192.png?v=${FAVICON_VERSION}`,
+        sizes: "192x192",
         type: "image/png",
       },
     ],

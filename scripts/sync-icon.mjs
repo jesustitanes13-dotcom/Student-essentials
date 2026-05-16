@@ -6,13 +6,16 @@ const target = join(root, "public", "icon.png");
 const sources = [
   join(root, "public", "icon.png"),
   join(root, "icon.png"),
+  join(root, "components", "tools", "icon (3).png"),
   join(root, "app", "icon.png"),
 ];
 
 const source = sources.find((p) => existsSync(p));
 
 if (!source) {
-  console.error("sync-icon: coloca tu icono en public/icon.png");
+  console.error(
+    "sync-icon: coloca tu icono en public/icon.png (archivo fuente del favicon)",
+  );
   process.exit(1);
 }
 
