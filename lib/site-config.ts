@@ -14,8 +14,8 @@ export const ADSENSE_CLIENT_ID =
 
 export const CONTACT_EMAIL = "hello@quickmla.com";
 
-/** Favicon: mismo PNG que el logo (`Logo.png2.png`); el ICO se copia en build desde `quickmla-favicon.ico`. */
-export const FAVICON_PUBLIC_URL = "/Logo.png2.png";
+/** Logo / favicon en `public/logo.png` (ICO de pestaña vía post-build). */
+export const FAVICON_PUBLIC_URL = "/logo.png";
 
 /** Ruta relativa → URL absoluta en quickmla.com */
 export function canonicalUrl(path = "/"): string {

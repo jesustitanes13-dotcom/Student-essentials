@@ -5,7 +5,6 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import {
   CANONICAL_ORIGIN,
   canonicalUrl,
-  FAVICON_PUBLIC_URL,
   SITE_NAME,
 } from "@/lib/site-config";
 import { Providers } from "./providers";
@@ -26,7 +25,7 @@ const defaultTitle =
 const description =
   "QuickMLA is the fastest way to format your essays in MLA and analyze your academic text locally and securely.";
 
-const ogImageUrl = canonicalUrl("/Logo.png2.png");
+const ogImageUrl = canonicalUrl("/logo.png");
 
 export const metadata: Metadata = {
   metadataBase: new URL(CANONICAL_ORIGIN),
@@ -37,8 +36,8 @@ export const metadata: Metadata = {
   description,
   applicationName: SITE_NAME,
   icons: {
-    icon: [{ url: FAVICON_PUBLIC_URL, type: "image/png" }],
-    apple: [{ url: FAVICON_PUBLIC_URL, type: "image/png" }],
+    icon: "/logo.png",
+    apple: "/logo.png",
   },
   keywords: [
     "QuickMLA",

@@ -1,6 +1,6 @@
 /**
  * Tras `next build`, Next puede sobrescribir `out/favicon.ico` con un ICO por defecto.
- * Copiamos el ICO generado desde `public/quickmla-favicon.ico` (basado en Logo.png2.png).
+ * Copiamos el ICO generado desde `public/quickmla-favicon.ico` (basado en `logo.png`).
  */
 import { copyFileSync, existsSync } from "fs";
 import { join } from "path";

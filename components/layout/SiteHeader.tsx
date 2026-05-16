@@ -18,7 +18,7 @@ export function SiteHeader() {
           className="flex min-w-0 flex-1 items-center gap-2.5 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
         >
           <Image
-            src="/Logo.png2.png"
+            src="/logo.png"
             alt=""
             width={240}
             height={40}
