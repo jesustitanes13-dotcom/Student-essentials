@@ -94,7 +94,6 @@ export const dictionary = {
     footerPrivacy: "Política de privacidad",
     footerTerms: "Términos de servicio",
     footerNavAria: "Enlaces del pie de página",
-    footerSupportLabel: "Soporte",
     footerTagline:
       "QuickMLA: formato MLA y análisis de texto académico, 100% en tu navegador.",
     footerRights: "Todos los derechos reservados.",
@@ -201,7 +200,6 @@ export const dictionary = {
     footerPrivacy: "Privacy Policy",
     footerTerms: "Terms of Service",
     footerNavAria: "Footer links",
-    footerSupportLabel: "Support",
     footerTagline:
       "QuickMLA: MLA formatting and academic text analysis, 100% in your browser.",
     footerRights: "All rights reserved.",
