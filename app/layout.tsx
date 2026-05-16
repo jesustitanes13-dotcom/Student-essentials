@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   description,
   applicationName: SITE_NAME,
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/icon-app.png?v=3",
+    apple: "/icon-app.png?v=3",
   },
   keywords: [
     "QuickMLA",
@@ -91,6 +91,9 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
+      <head>
+        <link rel="icon" href="/icon-app.png?v=3" type="image/png" />
+      </head>
       <body className="flex min-h-full flex-col antialiased">
         <AdSenseScript />
         <Providers>
