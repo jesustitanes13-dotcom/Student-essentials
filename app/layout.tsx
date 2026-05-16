@@ -5,6 +5,7 @@ import { SiteShell } from "@/components/layout/SiteShell";
 import {
   CANONICAL_ORIGIN,
   canonicalUrl,
+  FAVICON_PUBLIC_URL,
   SITE_NAME,
 } from "@/lib/site-config";
 import { Providers } from "./providers";
@@ -36,8 +37,8 @@ export const metadata: Metadata = {
   description,
   applicationName: SITE_NAME,
   icons: {
-    icon: [{ url: "/Logo.png2.png", type: "image/png" }],
-    apple: [{ url: "/Logo.png2.png", type: "image/png" }],
+    icon: [{ url: FAVICON_PUBLIC_URL, type: "image/png" }],
+    apple: [{ url: FAVICON_PUBLIC_URL, type: "image/png" }],
   },
   keywords: [
     "QuickMLA",

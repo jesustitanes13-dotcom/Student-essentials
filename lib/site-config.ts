@@ -14,6 +14,9 @@ export const ADSENSE_CLIENT_ID =
 
 export const CONTACT_EMAIL = "hello@quickmla.com";
 
+/** Favicon en `public/` (nombre con espacio → `%20` en la URL). */
+export const FAVICON_PUBLIC_URL = "/definitivo%20(1).png";
+
 /** Ruta relativa → URL absoluta en quickmla.com */
 export function canonicalUrl(path = "/"): string {
   if (path === "/" || path === "") return CANONICAL_ORIGIN;
