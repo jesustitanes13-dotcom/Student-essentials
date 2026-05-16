@@ -15,9 +15,9 @@ export const ADSENSE_CLIENT_ID =
 export const CONTACT_EMAIL = "hello@quickmla.com";
 
 /** Versión del favicon (cambiar al actualizar la imagen para romper caché del navegador). */
-export const FAVICON_VERSION = "6";
+export const FAVICON_VERSION = "7";
 
-/** Icono de pestaña: `public/icon.png` (sincronizado desde `app/icon.png` en prebuild). */
+/** Icono de pestaña servido desde `public/icon.png`. */
 export const FAVICON_PUBLIC_URL = `/icon.png?v=${FAVICON_VERSION}`;
 
 /** Ruta relativa → URL absoluta en quickmla.com */
