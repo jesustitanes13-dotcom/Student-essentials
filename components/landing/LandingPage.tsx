@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { Gift, Shield, Zap } from "lucide-react";
 import Link from "next/link";
 import { useSuite } from "@/components/providers/SuiteProviders";
 import { TOOLS } from "@/lib/site-config";
@@ -9,17 +9,17 @@ const BENEFIT_KEYS = [
   {
     titleKey: "benefitSpeedTitle" as const,
     descKey: "benefitSpeedDesc" as const,
-    icon: "/window.svg",
+    Icon: Zap,
   },
   {
     titleKey: "benefitPrivacyTitle" as const,
     descKey: "benefitPrivacyDesc" as const,
-    icon: "/file.svg",
+    Icon: Shield,
   },
   {
     titleKey: "benefitFreeTitle" as const,
     descKey: "benefitFreeDesc" as const,
-    icon: "/globe.svg",
+    Icon: Gift,
   },
 ] as const;
 
@@ -63,23 +63,21 @@ export function LandingPage() {
           {t("benefitsTitle")}
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
-          {BENEFIT_KEYS.map((item) => (
+          {BENEFIT_KEYS.map(({ titleKey, descKey, Icon }) => (
             <article
-              key={item.titleKey}
+              key={titleKey}
               className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 shadow-sm"
             >
-              <Image
-                src={item.icon}
-                alt=""
-                width={40}
-                height={40}
-                className="h-10 w-10 dark:invert"
+              <Icon
+                className="h-10 w-10 text-[var(--text-secondary)]"
+                strokeWidth={1.5}
+                aria-hidden
               />
               <h3 className="mt-4 text-base font-medium text-[var(--text-primary)]">
-                {t(item.titleKey)}
+                {t(titleKey)}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-                {t(item.descKey)}
+                {t(descKey)}
               </p>
             </article>
           ))}
