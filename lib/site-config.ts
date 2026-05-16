@@ -14,7 +14,7 @@ export const ADSENSE_CLIENT_ID =
 
 export const CONTACT_EMAIL = "hello@quickmla.com";
 
-/** Logo / favicon en `public/logo.png` (ICO de pestaña vía post-build). */
+/** Logo y favicon en `public/logo.png` (ver también `metadata.icons` en layout.tsx). */
 export const FAVICON_PUBLIC_URL = "/logo.png";
 
 /** Ruta relativa → URL absoluta en quickmla.com */
