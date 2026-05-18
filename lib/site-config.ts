@@ -10,7 +10,7 @@ export const SITE_URL = CANONICAL_ORIGIN;
 export const SITE_NAME = "QuickMLA";
 
 export const ADSENSE_CLIENT_ID =
-  process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID ?? "ca-pub-XXXXXXXXXXXXXXXX";
+  process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID ?? "ca-pub-8046528570244555";
 
 export const CONTACT_EMAIL = "helloquickmla@gmail.com";
 

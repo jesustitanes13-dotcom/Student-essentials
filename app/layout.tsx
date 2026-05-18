@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { AdSenseScript } from "@/components/ads/AdUnit";
+import Script from "next/script";
 import { SiteShell } from "@/components/layout/SiteShell";
 import {
+  ADSENSE_CLIENT_ID,
   APPLE_TOUCH_ICON_URL,
   CANONICAL_ORIGIN,
   canonicalUrl,
@@ -101,9 +102,15 @@ export default function RootLayout({
         <link rel="icon" href={FAVICON_ICO_URL} sizes="32x32" />
         <link rel="icon" href={FAVICON_URL} type="image/png" sizes="32x32" />
         <link rel="apple-touch-icon" href={APPLE_TOUCH_ICON_URL} />
+        <Script
+          id="adsense-init"
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body className="flex min-h-full flex-col antialiased">
-        <AdSenseScript />
         <Providers>
           <SiteShell>{children}</SiteShell>
         </Providers>

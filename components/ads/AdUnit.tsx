@@ -1,30 +1,7 @@
 "use client";
 
-import Script from "next/script";
 import { useEffect, useRef } from "react";
 import { ADSENSE_CLIENT_ID } from "@/lib/site-config";
-
-type AdSenseScriptProps = {
-  clientId?: string;
-};
-
-export function AdSenseScript({
-  clientId = ADSENSE_CLIENT_ID,
-}: AdSenseScriptProps) {
-  if (!clientId || clientId.includes("XXXXXXXX")) {
-    return null;
-  }
-
-  return (
-    <Script
-      id="adsense-init"
-      async
-      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${clientId}`}
-      crossOrigin="anonymous"
-      strategy="afterInteractive"
-    />
-  );
-}
 
 type AdUnitProps = {
   slot: string;
@@ -45,7 +22,7 @@ export function AdUnit({
 }: AdUnitProps) {
   const pushed = useRef(false);
   const clientId = ADSENSE_CLIENT_ID;
-  const enabled = clientId && !clientId.includes("XXXXXXXX");
+  const enabled = Boolean(clientId);
 
   useEffect(() => {
     if (!enabled || pushed.current) return;
