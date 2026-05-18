@@ -85,6 +85,9 @@ export const metadata: Metadata = {
     canonical: CANONICAL_ORIGIN,
   },
   category: "education",
+  other: {
+    "google-adsense-account": ADSENSE_CLIENT_ID,
+  },
 };
 
 export default function RootLayout({
