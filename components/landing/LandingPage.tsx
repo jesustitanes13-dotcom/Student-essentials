@@ -118,6 +118,138 @@ export function LandingPage() {
           </div>
         </div>
       </section>
+
+      <section className="border-t border-[var(--border)] bg-[var(--page)]">
+        <div className="mx-auto max-w-6xl space-y-12 px-4 py-14 sm:px-6">
+          <div>
+            <h2 className="text-2xl font-normal tracking-tight text-[var(--text-primary)]">
+              {t("faqSectionTitle")}
+            </h2>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-[var(--text-secondary)]">
+              {t("faqSectionIntro")}
+            </p>
+            <div className="mt-6 space-y-5">
+              <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
+                <h3 className="text-base font-medium text-[var(--text-primary)]">
+                  {t("faqQ1Title")}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
+                  {t("faqQ1Body")}
+                </p>
+              </article>
+              <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
+                <h3 className="text-base font-medium text-[var(--text-primary)]">
+                  {t("faqQ2Title")}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
+                  {t("faqQ2Body")}
+                </p>
+              </article>
+              <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5">
+                <h3 className="text-base font-medium text-[var(--text-primary)]">
+                  {t("faqQ3Title")}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
+                  {t("faqQ3Body")}
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-normal tracking-tight text-[var(--text-primary)]">
+              {t("mlaGuideTitle")}
+            </h2>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-[var(--text-secondary)]">
+              {t("mlaGuideIntro")}
+            </p>
+            <div className="mt-6 space-y-6">
+              <article>
+                <h3 className="text-base font-medium text-[var(--text-primary)]">
+                  {t("mlaGuideWhatTitle")}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
+                  {t("mlaGuideWhatBody")}
+                </p>
+              </article>
+              <article>
+                <h3 className="text-base font-medium text-[var(--text-primary)]">
+                  {t("mlaGuideStructureTitle")}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
+                  {t("mlaGuideStructureBody")}
+                </p>
+              </article>
+              <article>
+                <h3 className="text-base font-medium text-[var(--text-primary)]">
+                  {t("mlaGuide2026Title")}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
+                  {t("mlaGuide2026Body")}
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-normal tracking-tight text-[var(--text-primary)]">
+              {t("mlaCompareTitle")}
+            </h2>
+            <div className="mt-4 overflow-x-auto rounded-xl border border-[var(--border)] bg-[var(--surface)]">
+              <table className="min-w-full text-left text-sm">
+                <thead className="border-b border-[var(--border)] bg-[var(--page)]">
+                  <tr>
+                    <th className="px-4 py-3 font-medium text-[var(--text-primary)]">
+                      {t("mlaCompareHeaderCriteria")}
+                    </th>
+                    <th className="px-4 py-3 font-medium text-[var(--text-primary)]">
+                      {t("mlaCompareHeaderMla")}
+                    </th>
+                    <th className="px-4 py-3 font-medium text-[var(--text-primary)]">
+                      {t("mlaCompareHeaderApa")}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-[var(--border)]">
+                    <td className="px-4 py-3 text-[var(--text-primary)]">
+                      {t("mlaCompareCriterionFocus")}
+                    </td>
+                    <td className="px-4 py-3 text-[var(--text-secondary)]">
+                      {t("mlaCompareMlaFocus")}
+                    </td>
+                    <td className="px-4 py-3 text-[var(--text-secondary)]">
+                      {t("mlaCompareApaFocus")}
+                    </td>
+                  </tr>
+                  <tr className="border-b border-[var(--border)]">
+                    <td className="px-4 py-3 text-[var(--text-primary)]">
+                      {t("mlaCompareCriterionInText")}
+                    </td>
+                    <td className="px-4 py-3 text-[var(--text-secondary)]">
+                      {t("mlaCompareMlaInText")}
+                    </td>
+                    <td className="px-4 py-3 text-[var(--text-secondary)]">
+                      {t("mlaCompareApaInText")}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-3 text-[var(--text-primary)]">
+                      {t("mlaCompareCriterionReference")}
+                    </td>
+                    <td className="px-4 py-3 text-[var(--text-secondary)]">
+                      {t("mlaCompareMlaReference")}
+                    </td>
+                    <td className="px-4 py-3 text-[var(--text-secondary)]">
+                      {t("mlaCompareApaReference")}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

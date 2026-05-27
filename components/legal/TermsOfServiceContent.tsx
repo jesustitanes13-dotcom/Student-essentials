@@ -21,35 +21,51 @@ export function TermsOfServiceContent() {
     >
       <p className="text-sm leading-7 text-[var(--text-secondary)]">
         {isEs
-          ? `Al acceder a ${SITE_URL}, aceptas estos términos. Si no estás de acuerdo, no uses el sitio.`
-          : `By accessing ${SITE_URL}, you agree to these terms. If you do not agree, do not use the site.`}
+          ? `Al acceder a ${SITE_URL}, aceptas estos términos y condiciones de uso. Si no estás de acuerdo con alguna disposición, debes abstenerte de utilizar el sitio y sus herramientas.`
+          : `By accessing ${SITE_URL}, you agree to these terms and conditions. If you do not agree with any provision, you must discontinue use of the site and tools.`}
       </p>
 
       <LegalSection title={isEs ? "1. Uso del servicio" : "1. Use of the service"}>
         <p>
           {isEs
-            ? "Las herramientas se ofrecen «tal cual» con fines educativos. Debes verificar que el formato MLA cumpla los requisitos de tu institución o profesor."
-            : 'Tools are provided "as is" for educational purposes. You must verify that MLA output meets your school or instructor requirements.'}
+            ? "Las herramientas se proporcionan con fines educativos y de apoyo a estudiantes. Eres responsable de revisar el resultado final antes de entregar cualquier trabajo académico. QuickMLA no sustituye lineamientos institucionales, rúbricas de evaluación ni criterios de integridad académica exigidos por docentes."
+            : 'Tools are provided for educational support purposes. You are responsible for reviewing final output before submitting any academic work. QuickMLA does not replace institutional guidelines, grading rubrics, or instructor-level academic integrity requirements.'}
         </p>
       </LegalSection>
 
       <LegalSection title={isEs ? "2. Contenido del usuario" : "2. Your content"}>
         <p>
           {isEs
-            ? "Conservas todos los derechos sobre tu texto. No reclamamos propiedad sobre lo que escribes ni lo almacenamos en nuestros servidores."
-            : "You retain all rights to your text. We do not claim ownership of what you write and we do not store it on our servers."}
+            ? "Conservas la titularidad de tu contenido textual. No reclamamos derechos de autor sobre tus ensayos o borradores. Por diseño, el procesamiento principal es local y no requiere crear cuentas de contenido persistente."
+            : "You retain ownership of your text content. We do not claim copyright over your essays or drafts. By design, primary processing is local and does not require persistent user-content accounts."}
         </p>
       </LegalSection>
 
-      <LegalSection title={isEs ? "3. Limitación de responsabilidad" : "3. Limitation of liability"}>
+      <LegalSection title={isEs ? "3. Publicidad, cookies y terceros" : "3. Advertising, cookies, and third parties"}>
         <p>
           {isEs
-            ? "No garantizamos resultados académicos ni disponibilidad ininterrumpida. El software se ofrece sin garantías en la medida permitida por la ley aplicable."
-            : "We do not guarantee academic outcomes or uninterrupted availability. The software is provided without warranties to the extent permitted by applicable law."}
+            ? "El sitio puede incluir publicidad de terceros, incluyendo Google AdSense. El uso de anuncios puede implicar cookies o identificadores similares para medición y personalización, sujeto al marco de consentimiento aplicable (CMP). No controlamos de forma directa las políticas de terceros; te recomendamos revisar sus términos y avisos de privacidad."
+            : "The site may include third-party advertising, including Google AdSense. Ad delivery may involve cookies or similar identifiers for measurement and personalization, subject to the applicable consent framework (CMP). We do not directly control third-party policies; review their terms and privacy notices."}
         </p>
       </LegalSection>
 
-      <LegalSection title={isEs ? "4. Contacto" : "4. Contact"}>
+      <LegalSection title={isEs ? "4. Disponibilidad y modificaciones" : "4. Availability and modifications"}>
+        <p>
+          {isEs
+            ? "Podemos actualizar, pausar o retirar funcionalidades en cualquier momento para mantenimiento, cumplimiento legal o mejora del servicio. También podemos modificar estos términos; cualquier cambio material se publicará en esta página con fecha de actualización."
+            : "We may update, pause, or discontinue features at any time for maintenance, legal compliance, or service improvements. We may also modify these terms; material changes will be posted on this page with an updated effective date."}
+        </p>
+      </LegalSection>
+
+      <LegalSection title={isEs ? "5. Limitación de responsabilidad" : "5. Limitation of liability"}>
+        <p>
+          {isEs
+            ? "No garantizamos resultados académicos específicos, disponibilidad ininterrumpida ni ausencia total de errores. En la máxima medida permitida por la ley, el servicio se ofrece «tal cual» y «según disponibilidad», sin garantías implícitas adicionales."
+            : 'We do not guarantee specific academic outcomes, uninterrupted availability, or complete error-free operation. To the maximum extent permitted by law, the service is provided "as is" and "as available," without additional implied warranties.'}
+        </p>
+      </LegalSection>
+
+      <LegalSection title={isEs ? "6. Contacto" : "6. Contact"}>
         <p>
           <Link
             href={`mailto:${CONTACT_EMAIL}`}

@@ -6,6 +6,7 @@ export const dynamic = "force-static";
 const SITEMAP_PATHS = [
   { path: "/", changeFrequency: "weekly" as const, priority: 1 },
   { path: "/tools", changeFrequency: "weekly" as const, priority: 0.9 },
+  { path: "/about", changeFrequency: "monthly" as const, priority: 0.6 },
   { path: "/privacy-policy", changeFrequency: "yearly" as const, priority: 0.3 },
   { path: "/terms-of-service", changeFrequency: "yearly" as const, priority: 0.3 },
 ];

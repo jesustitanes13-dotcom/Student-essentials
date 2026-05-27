@@ -68,5 +68,6 @@ export const LEGAL_ROUTES = [
 export const NAV_ROUTES = [
   { path: "/", labelKey: "footerHome" as const },
   { path: "/tools", labelKey: "footerTools" as const },
+  { path: "/about", labelKey: "footerAbout" as const },
   ...LEGAL_ROUTES,
 ];
